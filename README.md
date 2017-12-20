@@ -9,7 +9,7 @@ Code from "[Essential Sqlalchemy: Mapping Python to Databases][1]" book (second 
 
 ## Table of Content
 
- - [ ] [Introduction](src/intro/)
+ - [x] [Introduction](src/intro/)
  - [ ] Part 1: SQLAlchemy Core
      - [ ] Chapter 1: Schema and Types
      - [ ] Chapter 2: Working with Data via SQLAlchemy Core
