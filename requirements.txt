@@ -1,2 +1,3 @@
 SQLAlchemy==1.1.15
 psycopg2==2.7.3.2
+pymysql==0.8.0
