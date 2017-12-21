@@ -12,5 +12,5 @@ users = Table(
     Column('phone', String(20), nullable=False),
     Column('password', String(25), nullable=False),
     Column('created_on', DateTime(), default=datetime.now),
-    Column('update_on', DateTime(), default=datetime.now, onupdate=datetime.now)
+    Column('updated_on', DateTime(), default=datetime.now, onupdate=datetime.now)
 )
