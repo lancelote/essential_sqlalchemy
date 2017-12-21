@@ -41,7 +41,7 @@ ins2 = insert(cookies).values(
 # Provide values for insertion separately
 ins3 = cookies.insert()
 result3 = connection.execute(
-    ins,
+    ins3,
     cookie_name='dark chocolate chip',
     cookie_recipe_url='http://some.aweso.me/cookie/recipe_dark.html',
     cookie_sku='CC02',
