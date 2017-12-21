@@ -1,4 +1,4 @@
-from pprint import pprint
+# from pprint import pprint
 
 from sqlalchemy import insert
 
@@ -12,13 +12,13 @@ ins = cookies.insert().values(
     unit_cost='0.50'
 )
 
-print(str(ins))
+# print(str(ins))
 # INSERT INTO cookies
 #   (cookie_name, cookie_recipe_url, cookie_sku, quantity, unit_cost)
 # VALUES
 #   (:cookie_name, :cookie_recipe_url, :cookie_sku, :quantity, :unit_cost)
 
-pprint(ins.compile().params)
+# pprint(ins.compile().params)
 # {'cookie_name': 'chocolate chip',
 #  'cookie_recipe_url': 'http://some.aweso.me/cookie/recipe.html',
 #  'cookie_sku': 'CC01',
