@@ -6,7 +6,7 @@ from src.part1.chapter2.inserting import cookies, connection
 
 selection = select([cookies])
 
-print(str(selection))
+# print(str(selection))
 # SELECT
 #   cookies.cookie_id, cookies.cookie_name, cookies.cookie_recipe_url, cookies.cookie_sku, cookies.quantity,
 #   cookies.unit_cost
@@ -25,3 +25,6 @@ result = result_proxy.fetchall()
 selection = cookies.select()
 result_proxy = connection.execute(selection)
 results = result_proxy.fetchall()
+
+# Result proxy got emptied after fetchall
+assert list(result_proxy) == []
