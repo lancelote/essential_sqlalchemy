@@ -12,7 +12,7 @@ Code from "[Essential Sqlalchemy: Mapping Python to Databases][1]" book (second 
  - [x] [Introduction](src/intro/)
  - [ ] [Part 1: SQLAlchemy Core](src/part1/)
      - [x] [Chapter 1: Schema and Types](src/part1/chapter1)
-     - [ ] [Chapter 2: Working with Data via SQLAlchemy Core](src/part1/chapter2)
+     - [x] [Chapter 2: Working with Data via SQLAlchemy Core](src/part1/chapter2)
      - [ ] Chapter 3: Exceptions and Transactions
      - [ ] Chapter 4: Testing
      - [ ] Chapter 5: Refection
