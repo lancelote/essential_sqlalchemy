@@ -1,6 +1,6 @@
 from sqlalchemy import update, select
 
-from src.part1.chapter2.conjunctions import cookies, connection
+from src.part1.chapter2.s20_conjunctions import cookies, connection
 
 selection = update(cookies).where(cookies.c.cookie_name == 'chocolate chip')
 selection = selection.values(quantity=(cookies.c.quantity + 120))

@@ -1,7 +1,7 @@
 from sqlalchemy import select, func
 
-from src.part1.chapter2.additional_data import orders, users, connection, line_items
-from src.part1.chapter2.deleting import cookies
+from src.part1.chapter2.s23_additional_data import orders, users, connection, line_items
+from src.part1.chapter2.s22_deleting import cookies
 
 columns = [
     orders.c.order_id,

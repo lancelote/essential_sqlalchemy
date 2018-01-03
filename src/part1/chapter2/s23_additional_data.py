@@ -1,7 +1,7 @@
 from sqlalchemy import insert
 
-from src.part1.chapter1.in_memory_full_example import users, orders, line_items
-from src.part1.chapter2.deleting import connection
+from src.part1.chapter1.s10_in_memory_full_example import users, orders, line_items
+from src.part1.chapter2.s22_deleting import connection
 
 customer_list = [
     {

@@ -1,6 +1,6 @@
 from sqlalchemy import and_, or_, select
 
-from src.part1.chapter2.operators import cookies, connection
+from src.part1.chapter2.s19_operators import cookies, connection
 
 # List of cookies with a cost of less than an amount and above certain quantity
 selection = select([cookies]).where(

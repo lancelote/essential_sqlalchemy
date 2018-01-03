@@ -1,6 +1,6 @@
 from sqlalchemy import select
 
-from src.part1.chapter2.sql_functions_and_labels import cookies, connection
+from src.part1.chapter2.s17_sql_functions_and_labels import cookies, connection
 
 # Finding chocolate chip
 selection = select([cookies]).where(cookies.c.cookie_name == 'chocolate chip')

@@ -2,7 +2,7 @@
 
 from sqlalchemy import insert
 
-from src.part1.chapter1.in_memory_full_example import cookies, engine
+from src.part1.chapter1.s10_in_memory_full_example import cookies, engine
 
 ins = cookies.insert().values(
     cookie_name='chocolate chip',

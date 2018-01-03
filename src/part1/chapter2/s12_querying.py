@@ -2,7 +2,7 @@
 
 from sqlalchemy.sql import select
 
-from src.part1.chapter2.inserting import cookies, connection
+from src.part1.chapter2.s11_inserting import cookies, connection
 
 selection = select([cookies])
 

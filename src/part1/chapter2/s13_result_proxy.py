@@ -1,4 +1,4 @@
-from src.part1.chapter2.querying import results, cookies, selection, connection
+from src.part1.chapter2.s12_querying import results, cookies, selection, connection
 
 first_row = results[0]
 

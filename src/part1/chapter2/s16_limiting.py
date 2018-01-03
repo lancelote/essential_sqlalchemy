@@ -1,6 +1,6 @@
 from sqlalchemy import select
 
-from src.part1.chapter2.ordering import cookies, connection
+from src.part1.chapter2.s15_ordering import cookies, connection
 
 selection = select([cookies.c.cookie_name, cookies.c.quantity])
 selection = selection.order_by(cookies.c.quantity)

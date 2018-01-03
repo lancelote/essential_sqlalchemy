@@ -1,7 +1,7 @@
 from sqlalchemy import select
 from sqlalchemy.sql import func
 
-from src.part1.chapter2.limiting import cookies, connection
+from src.part1.chapter2.s16_limiting import cookies, connection
 
 # How many cookies do we have
 selection = select([func.sum(cookies.c.quantity)])

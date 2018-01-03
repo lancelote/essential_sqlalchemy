@@ -1,6 +1,6 @@
 from sqlalchemy import select, cast, Numeric
 
-from src.part1.chapter2.filtering import cookies, connection
+from src.part1.chapter2.s18_filtering import cookies, connection
 
 # String concatenation
 selection = select([cookies.c.cookie_name, 'SKU-' + cookies.c.cookie_sku])
