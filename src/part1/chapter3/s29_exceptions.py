@@ -13,7 +13,7 @@ cookies = Table(
     Column('cookie_sku', String(55)),
     Column('quantity', Integer()),
     Column('unit_cost', Numeric(12, 2)),
-    CheckConstraint('quantity > 0', name='quantity_positive')
+    CheckConstraint('quantity >= 0', name='quantity_positive')
 )
 
 users = Table(
