@@ -1,6 +1,7 @@
 from datetime import datetime
 
-from sqlalchemy import Boolean, Column, DateTime, ForeignKey, Integer, MetaData, Numeric, String, Table, create_engine
+from sqlalchemy import Boolean, Column, DateTime, ForeignKey, Integer, MetaData, Numeric, String, Table, \
+    create_engine, insert
 
 
 class DataAccessLayer:
@@ -46,10 +47,101 @@ class DataAccessLayer:
         Column('extended_cost', Numeric(12, 2))
     )
 
-    def db_init(self, conn_string):
-        self.engine = create_engine(conn_string or self.connection_string)
+    def db_init(self, connection_string):
+        self.engine = create_engine(connection_string or self.connection_string)
         self.metadata.create_all(self.engine)
         self.connection = self.engine.connect()
 
 
-data_access_layer = DataAccessLayer()
+dal = DataAccessLayer()
+
+
+def prepare_db():
+    """Add test data to the database."""
+
+    insertion = dal.cookies.insert()
+    dal.connection.execute(
+        insertion,
+        cookie_name='dark chocolate chip',
+        cookie_recipe_url='http://some.aweso.me/cookie/recipe_dark.html',
+        cookie_sku='CC02',
+        quantity='1',
+        unit_cost='0.75')
+
+    inventory_list = [
+        {
+            'cookie_name': 'peanut butter',
+            'cookie_recipe_url': 'http://some.aweso.me/cookie/peanut.html',
+            'cookie_sku': 'PB01',
+            'quantity': '24',
+            'unit_cost': '0.25'
+        },
+        {
+            'cookie_name': 'oatmeal raisin',
+            'cookie_recipe_url': 'http://some.okay.me/cookie/raisin.html',
+            'cookie_sku': 'EWW01',
+            'quantity': '100',
+            'unit_cost': '1.00'
+        }]
+    dal.connection.execute(insertion, inventory_list)
+
+    customer_list = [
+        {
+            'username': "cookiemon",
+            'email_address': "mon@cookie.com",
+            'phone': "111-111-1111",
+            'password': "password"
+        },
+        {
+            'username': "cakeeater",
+            'email_address': "cakeeater@cake.com",
+            'phone': "222-222-2222",
+            'password': "password"
+        },
+        {
+            'username': "pieguy",
+            'email_address': "guy@pie.com",
+            'phone': "333-333-3333",
+            'password': "password"
+        }]
+    insertion = dal.users.insert()
+
+    dal.connection.execute(insertion, customer_list)
+    insertion = insert(dal.orders).values(user_id=1, order_id='wlk001')
+
+    dal.connection.execute(insertion)
+    insertion = insert(dal.line_items)
+
+    order_items = [
+        {
+            'order_id': 'wlk001',
+            'cookie_id': 1,
+            'quantity': 2,
+            'extended_cost': 1.00
+        },
+        {
+            'order_id': 'wlk001',
+            'cookie_id': 3,
+            'quantity': 12,
+            'extended_cost': 3.00
+        }]
+    dal.connection.execute(insertion, order_items)
+
+    insertion = insert(dal.orders).values(user_id=2, order_id='ol001')
+    dal.connection.execute(insertion)
+
+    insertion = insert(dal.line_items)
+    order_items = [
+        {
+            'order_id': 'ol001',
+            'cookie_id': 1,
+            'quantity': 24,
+            'extended_cost': 12.00
+        },
+        {
+            'order_id': 'ol001',
+            'cookie_id': 4,
+            'quantity': 6,
+            'extended_cost': 6.00
+        }]
+    dal.connection.execute(insertion, order_items)
