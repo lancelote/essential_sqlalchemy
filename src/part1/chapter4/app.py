@@ -3,7 +3,7 @@ from sqlalchemy.sql import select
 from src.part1.chapter4.db import dal
 
 
-def get_orders_by_customer(customer_name, shipped=None, details=False):
+def get_orders_by_customer(customer, shipped=None, details=False):
     """Get all orders of the given customer."""
     columns = [dal.orders.c.order_id,
                dal.users.c.username,
@@ -18,7 +18,7 @@ def get_orders_by_customer(customer_name, shipped=None, details=False):
 
     customer_orders = select(columns)
     customer_orders = customer_orders.select_from(joins).where(
-        dal.users.c.username == customer_name)
+        dal.users.c.username == customer)
 
     if shipped is not None:
         customer_orders = customer_orders.where(dal.orders.c.shipped == shipped)
