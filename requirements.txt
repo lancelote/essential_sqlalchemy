@@ -1,5 +1,6 @@
-SQLAlchemy==1.2.0
+SQLAlchemy==1.2.1
 psycopg2==2.7.3.2
 pymysql==0.8.0
 pur==4.0.3
 pytest==3.3.2
+pytest-mock==1.6.3
