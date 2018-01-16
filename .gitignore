@@ -3,3 +3,6 @@
 
 # Database files
 dbs/
+
+# pytest cache
+.cache/
