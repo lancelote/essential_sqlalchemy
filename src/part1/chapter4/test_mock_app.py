@@ -1,27 +1,17 @@
-import unittest
-from decimal import Decimal
-from unittest import mock
-
-from src.part1.chapter4.app import get_orders_by_customer
+from src.part1.chapter4 import app
+from src.part1.chapter4.app import dal, get_orders_by_customer
 
 
-class TestApp(unittest.TestCase):
+def test_orders_by_customer(mocker):
+    mocker.patch.object(dal, 'connection')
     cookie_orders = [('wlk001', 'cookiemon', '111-111-1111')]
-    cookie_details = [
-        ('wlk001', 'cookiemon', '111-111-1111', 'dark chocolate chip', 2, Decimal('1.00')),
-        ('wlk001', 'cookiemon', '111-111-1111', 'oatmeal raisin', 12, Decimal('3.00')),
-    ]
+    dal.connection.execute.return_value.fetchall.return_value = cookie_orders
+    assert get_orders_by_customer('cookiemon') == cookie_orders
 
-    @mock.patch('src.part1.chapter4.app.dal.connection')
-    def test_orders_by_customer(self, mock_connection):
-        mock_connection.execute.return_value.fetchall.return_value = self.cookie_orders
-        results = get_orders_by_customer('cookiemon')
-        self.assertEqual(results, self.cookie_orders)
 
-    @mock.patch('src.part1.chapter4.app.select')
-    @mock.patch('src.part1.chapter4.app.dal.connection')
-    def test_orders_by_customer_blank(self, mock_connection, mock_select):
-        mock_select.return_value.select_from.return_value.where.return_value = ''
-        mock_connection.execute.return_value.fetchall.return_value = []
-        results = get_orders_by_customer('')
-        self.assertEqual(results, [])
+def test_orders_by_customer_blank(mocker):
+    mocker.patch.object(dal, 'connection')
+    mocker.patch.object(app, 'select')
+    dal.connection.execute.return_value.fetchall.return_value = []
+    app.select.return_value.select_from.return_value.where.return_value = ''
+    assert get_orders_by_customer('') == []
