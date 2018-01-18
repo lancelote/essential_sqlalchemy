@@ -15,7 +15,7 @@ Code from "[Essential Sqlalchemy: Mapping Python to Databases][1]" book (second 
      - [x] [Chapter 2: Working with Data via SQLAlchemy Core](src/part1/chapter2)
      - [x] [Chapter 3: Exceptions and Transactions](src/part1/chapter3)
      - [x] [Chapter 4: Testing](src/part1/chapter4)
-     - [ ] Chapter 5: Refection
+     - [ ] Chapter 5: Reflection
  - [ ] Part 2: SQLAlchemy ORM
      - [ ] Chapter 6: Defining Schema with SQLAlchemy ORM
      - [ ] Chapter 7: Working with Data via SQLAlchemy ORM
