@@ -11,7 +11,7 @@ first_10_records = engine.execute(selection).fetchall()
 assert first_10_records[0] == (1, 'AC/DC')
 
 album = Table('Album', metadata, autoload=True, autoload_with=engine)
-# metadata.tables['Album']
+# print(metadata.tables['Album'])
 #
 #    Table('Album',
 #        MetaData(bind=None),
@@ -20,7 +20,7 @@ album = Table('Album', metadata, autoload=True, autoload_with=engine)
 #        Column('ArtistId', INTEGER(), ForeignKey('Artist.ArtistId'), table=<Album>, nullable=False), schema=None)
 #    )
 
-# album.foreign_keys
+# print(album.foreign_keys)
 #
 #    {ForeignKey('Artist.ArtistId')}
 
