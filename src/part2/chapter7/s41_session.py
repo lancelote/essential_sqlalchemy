@@ -4,7 +4,7 @@ from sqlalchemy import Column, DateTime, ForeignKey, Integer, Numeric, String, c
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import backref, relationship, sessionmaker
 
-engine = create_engine('sqlite:///:memory:')
+engine = create_engine('sqlite:///:memory:')  # Add echo=True to see raw database log
 Session = sessionmaker(bind=engine)
 session = Session()
 Base = declarative_base()
@@ -73,7 +73,7 @@ class LineItems(Base):
     quantity = Column(Integer())
     extended_cost = Column(Numeric(12, 2))
     order = relationship('Order', backref=backref('line_items', order_by=line_item_id))
-    cookie = relationship('Cookie', uselist=False, order_by=id)
+    cookie = relationship('Cookie', uselist=False, order_by=line_item_id)
 
     def __repr__(self):
         return ("LineItems("
