@@ -23,7 +23,7 @@ class Cookie(Base):
     def __repr__(self):
         return ("Cookie("
                 "    cookie_name='{self.cookie_name}',"
-                "    cookie_recipe_url='{self.cookie_recipe_url',"
+                "    cookie_recipe_url='{self.cookie_recipe_url}',"
                 "    cookie_sku='{self.cookie_sku}',"
                 "    quantity={self.quantity},"
                 "    unit_cost={self.unit_cost}"
