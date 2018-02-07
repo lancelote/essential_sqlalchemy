@@ -6,3 +6,7 @@
 
 # Python byte code
 __pycache__/
+
+# Vagrant
+Vagrantfile
+.vagrant/
