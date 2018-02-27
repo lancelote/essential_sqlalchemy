@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from sqlalchemy import Column, DateTime, ForeignKey, Integer, Numeric, String, create_engine
+from sqlalchemy import Boolean, Column, DateTime, ForeignKey, Integer, Numeric, String, create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import backref, relationship, sessionmaker
 
@@ -56,6 +56,7 @@ class Order(Base):
     order_id = Column(Integer(), primary_key=True)
     user_id = Column(Integer(), ForeignKey('users.user_id'))
     user = relationship('User', backref=backref('orders', order_by=order_id))
+    shipped = Column(Boolean(), default=False)
 
     def __repr__(self):
         return ('Order('
