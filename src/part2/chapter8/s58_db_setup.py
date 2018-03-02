@@ -10,7 +10,7 @@ session = Session()
 Base = declarative_base()
 
 
-class Coolie(Base):
+class Cookie(Base):
     __tablename__ = 'cookies'
 
     cookie_id = Column(Integer(), primary_key=True)
