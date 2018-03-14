@@ -78,7 +78,7 @@ class Order(Base):
                 ")".format(self=self))
 
 
-class LineItems(Base):
+class LineItem(Base):
     __tablename__ = 'line_items'
 
     line_item_id = Column(Integer(), primary_key=True)
