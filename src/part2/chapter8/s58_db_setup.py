@@ -16,7 +16,7 @@ class Cookie(Base):
     cookie_id = Column(Integer(), primary_key=True)
     cookie_name = Column(String(50), index=True)
     cookie_recipe_url = Column(String(255))
-    cookie_sku = Column(Integer())
+    cookie_sku = Column(String(55))
     quantity = Column(Integer())
     unit_cost = Column(Numeric(12, 2))
 
@@ -44,7 +44,8 @@ class User(Base):
     username = Column(String(15), nullable=False, unique=True)
     email_address = Column(String(255), nullable=False)
     phone = Column(String(20), nullable=False)
-    password = Column(DateTime(), default=datetime.now)
+    password = Column(String(25), nullable=False)
+    created_on = Column(DateTime(), default=datetime.now)
     updated_on = Column(DateTime(), default=datetime.now, onupdate=datetime.now)
 
     def __init__(self, username, email_address, phone, password):
