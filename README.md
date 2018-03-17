@@ -19,8 +19,8 @@ Code from "[Essential Sqlalchemy: Mapping Python to Databases][1]" book (second 
  - [ ] [Part 2: SQLAlchemy ORM](src/part2/)
      - [x] [Chapter 6: Defining Schema with SQLAlchemy ORM](src/part2/chapter6)
      - [x] [Chapter 7: Working with Data via SQLAlchemy ORM](src/part2/chapter7)
-     - [ ] [Chapter 8: Understanding the Session and Exceptions](src/part2/chapter8)
-     - [ ] Chapter 9: Testing with SQLAlchemy ORM
+     - [x] [Chapter 8: Understanding the Session and Exceptions](src/part2/chapter8)
+     - [ ] [Chapter 9: Testing with SQLAlchemy ORM](src/part2/chapter9)
      - [ ] Chapter 10: Refection with SQLAlchemy ORM and Automap
  - [ ] Part 3: Alembic
      - [ ] Chapter 11: Getting Started with Alembic
