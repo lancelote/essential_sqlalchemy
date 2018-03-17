@@ -11,3 +11,6 @@ __pycache__/
 # Vagrant
 Vagrantfile
 .vagrant/
+
+# pipenv
+Pipfile.lock
