@@ -3,6 +3,7 @@
 
 # pytest cache
 .cache/
+.pytest_cache/
 
 # Python byte code
 __pycache__/
