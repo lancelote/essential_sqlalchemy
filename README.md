@@ -16,13 +16,13 @@ Code from "[Essential Sqlalchemy: Mapping Python to Databases][1]" book (second 
      - [x] [Chapter 3: Exceptions and Transactions](src/part1/chapter3/)
      - [x] [Chapter 4: Testing](src/part1/chapter4/)
      - [x] [Chapter 5: Reflection](src/part1/chapter5/)
- - [ ] [Part 2: SQLAlchemy ORM](src/part2/)
+ - [x] [Part 2: SQLAlchemy ORM](src/part2/)
      - [x] [Chapter 6: Defining Schema with SQLAlchemy ORM](src/part2/chapter6)
      - [x] [Chapter 7: Working with Data via SQLAlchemy ORM](src/part2/chapter7)
      - [x] [Chapter 8: Understanding the Session and Exceptions](src/part2/chapter8)
      - [x] [Chapter 9: Testing with SQLAlchemy ORM](src/part2/chapter9)
-     - [ ] [Chapter 10: Refection with SQLAlchemy ORM and Automap](src/part2/chapter10)
- - [ ] Part 3: Alembic
+     - [x] [Chapter 10: Refection with SQLAlchemy ORM and Automap](src/part2/chapter10)
+ - [ ] [Part 3: Alembic](src/part3/)
      - [ ] Chapter 11: Getting Started with Alembic
      - [ ] Chapter 12: Building Migrations
      - [ ] Chapter 13: Controlling Alembic
