@@ -5,6 +5,13 @@ from logging.config import fileConfig
 from sqlalchemy import engine_from_config, pool
 
 from alembic import context
+
+import os
+import sys
+
+# Add `app` directory to the scope
+sys.path.append(os.getcwd())
+
 from app.db import Base
 
 # this is the Alembic Config object, which provides
