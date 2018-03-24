@@ -7,7 +7,7 @@ Base = declarative_base()
 
 
 class Cookie(Base):
-    __tablename__ = 'cookies'
+    __tablename__ = 'new_cookies'
 
     cookie_id = Column(Integer(), primary_key=True)
     cookie_name = Column(String(50), index=True)

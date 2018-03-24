@@ -24,7 +24,7 @@ Code from "[Essential Sqlalchemy: Mapping Python to Databases][1]" book (second 
      - [x] [Chapter 10: Refection with SQLAlchemy ORM and Automap](src/part2/chapter10/)
  - [ ] [Part 3: Alembic](src/part3/)
      - [x] [Chapter 11: Getting Started with Alembic](src/part3/)
-     - [ ] Chapter 12: Building Migrations
+     - [x] [Chapter 12: Building Migrations](src/part3/)
      - [ ] Chapter 13: Controlling Alembic
      - [ ] Chapter 14: Cookbook
      - [ ] Chapter 15: Where to Go from Here
