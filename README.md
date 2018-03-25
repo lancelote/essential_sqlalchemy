@@ -26,5 +26,5 @@ Code from "[Essential Sqlalchemy: Mapping Python to Databases][1]" book (second 
      - [x] [Chapter 11: Getting Started with Alembic](src/part3/chapter11-13/)
      - [x] [Chapter 12: Building Migrations](src/part3/chapter11-13/)
      - [x] [Chapter 13: Controlling Alembic](src/part3/chapter11-13/)
-     - [ ] Chapter 14: Cookbook
+     - [ ] [Chapter 14: Cookbook](src/part3/chapter14/)
      - [ ] Chapter 15: Where to Go from Here
