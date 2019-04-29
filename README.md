@@ -1,5 +1,3 @@
-[![Requirements Status](https://requires.io/github/lancelote/essential_sqlalchemy/requirements.svg?branch=master)](https://requires.io/github/lancelote/essential_sqlalchemy/requirements/?branch=master)
-
 # essential_sqlalchemy
 
 Code from "[Essential Sqlalchemy: Mapping Python to Databases][1]" book (second edition) by Jason Myers and Rick Copeland with my experiments. For original book code examples see [dedicated repository][2].
